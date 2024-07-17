@@ -2,12 +2,12 @@ uiApplication = actxGetRunningServer('STK11.Application');
 root = uiApplication.Personality2;
 scenario = root.CurrentScenario;
  
-filename = 'E:\STK11\STKFile\satBysPos.txt';
+filename = 'Pending File';
 fileID = fopen(filename, 'r');
 satData = textscan(fileID, '%s %f %f %f', 'Delimiter', ' ');
 fclose(fileID);
-fileID_up = fopen('E:\STK11\STKFile\upSat.txt', 'w');
-fileID_down = fopen('E:\STK11\STKFile\downSat.txt', 'w');
+fileID_up = fopen('UP Sat File', 'w');
+fileID_down = fopen('Down Sat File', 'w');
  
 for i = 1:length(satData{1})
     satName = satData{1}{i};
